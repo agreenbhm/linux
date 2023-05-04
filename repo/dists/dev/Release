@@ -1,0 +1,17 @@
+Date: Thu, 04 May 2023 14:05:03 +0000
+MD5Sum:
+ 32bc583ce4a5f454c74eb60aa5a0ec25               38 Release
+ 6718b9fbef5a1b64d7342f8ffb2aea60             1938 main/binary-riscv64/Packages
+ a95ff44be4716d2f15cacf3da8ef382c              828 main/binary-riscv64/Packages.gz
+SHA1:
+ 911bc1539a8072dc7a3664fb2fb528454540fc99               38 Release
+ a7d15bb87db276920a7ac34445a23f52220491d2             1938 main/binary-riscv64/Packages
+ f3c0de012dac09f350eca81236ae838bd79bd686              828 main/binary-riscv64/Packages.gz
+SHA256:
+ 8d7dcb66fd11b051510da348c83540a112f68a8fe0b1b0ff5f9e08a75b11539e               38 Release
+ 91df10a2ed6b1792eb8362835787af358145427a3ca324a9223bf3cf0a8de954             1938 main/binary-riscv64/Packages
+ 63191a1426b11c3f21e4ceb2e674f55fc2b7f31dca656bb50eb5dfac8d2e1a5f              828 main/binary-riscv64/Packages.gz
+SHA512:
+ 9e3973808d4805f42b9076ccb5fd4f720628a2b133788c868ec61ea25e2dd2a8b2b0d37a23e6bf6509038ba4d1f1c8ae9be86f1688322cac90756f553df6bb48               38 Release
+ 400d761bd7bc6a5bd93d6550512e69eca5923dfa648c7c18793cba8384bd3fd7df212fd231140b7042ab2da17ac7b24fe520d4486c149e707376d87e2770b155             1938 main/binary-riscv64/Packages
+ c8274dc77d70444f5ee03b5bcb3b93245450f6048815124516c80b60aa71594eeff967a2fd436415454f171a7ca8673931a0029c7928cdbb18e496c913f3bfd7              828 main/binary-riscv64/Packages.gz
