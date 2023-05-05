@@ -1,3 +1,41 @@
+Package: linux-headers-6.3.0-g06bc4faf9daf
+Source: linux-upstream
+Version: 6.3.0-g06bc4faf9daf-3
+Architecture: riscv64
+Maintainer: root <root@ac600c8ae7f3>
+Installed-Size: 48719
+Filename: ./linux-headers-6.3.0-g06bc4faf9daf_6.3.0-g06bc4faf9daf-3_riscv64.deb
+Size: 8105620
+MD5sum: b0ad18897df02abdb4fbcf64ecc851d1
+SHA1: 60c075f10ba9b8488acef41f7dcb151f54acf03c
+SHA256: 70d45f8a19cab77c649488b557d58d3416c2ccf9819905f05492df309c572e20
+Section: kernel
+Priority: optional
+Homepage: https://www.kernel.org/
+Description: Linux kernel headers for 6.3.0-g06bc4faf9daf on riscv64
+ This package provides kernel header files for 6.3.0-g06bc4faf9daf on riscv64
+ .
+ This is useful for people who need to build external modules
+
+Package: linux-headers-6.3.0-ga2db966fb515
+Source: linux-upstream
+Version: 6.3.0-ga2db966fb515-1
+Architecture: riscv64
+Maintainer: root <root@0086e030cb17>
+Installed-Size: 48719
+Filename: ./linux-headers-6.3.0-ga2db966fb515_6.3.0-ga2db966fb515-1_riscv64.deb
+Size: 8106116
+MD5sum: 0abe5e2815ddaebe2e58848dfa3c7f1c
+SHA1: b006f12e84a6e5af1a4aba91de8ca7e7219afecb
+SHA256: 24f2e652d4b1c76773d3ce9fc273651eaaad09d6d898d99a1ecf1e543041de45
+Section: kernel
+Priority: optional
+Homepage: https://www.kernel.org/
+Description: Linux kernel headers for 6.3.0-ga2db966fb515 on riscv64
+ This package provides kernel header files for 6.3.0-ga2db966fb515 on riscv64
+ .
+ This is useful for people who need to build external modules
+
 Package: linux-headers-6.3.0-gcae52a74e6b5
 Source: linux-upstream
 Version: 6.3.0-gcae52a74e6b5-2
@@ -17,6 +55,79 @@ Description: Linux kernel headers for 6.3.0-gcae52a74e6b5 on riscv64
  .
  This is useful for people who need to build external modules
 
+Package: linux-headers-6.3.0-ge52f93181685
+Source: linux-upstream
+Version: 6.3.0-ge52f93181685-2
+Architecture: riscv64
+Maintainer: root <root@6781e9e16f25>
+Installed-Size: 48719
+Filename: ./linux-headers-6.3.0-ge52f93181685_6.3.0-ge52f93181685-2_riscv64.deb
+Size: 8106032
+MD5sum: 2aefa26927e3b30a8702d6df0ce7d294
+SHA1: cd61599f77a283ffd7bd2a43212396f8f24e26e7
+SHA256: 79d618a4f102187352d08668bd17bc6e3bdfbba0280de3de02de41305e524219
+Section: kernel
+Priority: optional
+Homepage: https://www.kernel.org/
+Description: Linux kernel headers for 6.3.0-ge52f93181685 on riscv64
+ This package provides kernel header files for 6.3.0-ge52f93181685 on riscv64
+ .
+ This is useful for people who need to build external modules
+
+Package: linux-image-6.3.0-g06bc4faf9daf
+Source: linux-upstream
+Version: 6.3.0-g06bc4faf9daf-3
+Architecture: riscv64
+Maintainer: root <root@ac600c8ae7f3>
+Installed-Size: 20482
+Filename: ./linux-image-6.3.0-g06bc4faf9daf_6.3.0-g06bc4faf9daf-3_riscv64.deb
+Size: 11345752
+MD5sum: bc89cf38032d759c638bda7eab81c91e
+SHA1: 7a43affd2de823a48e5fcce5486aab1becb4be3c
+SHA256: 0cf158827a22057952a3d70c636575c4c47a21ca48b68e695a3edd0480b35c5b
+Section: kernel
+Priority: optional
+Homepage: https://www.kernel.org/
+Description: Linux kernel, version 6.3.0-g06bc4faf9daf
+ This package contains the Linux kernel, modules and corresponding other
+ files, version: 6.3.0-g06bc4faf9daf.
+
+Package: linux-image-6.3.0-g171a9d7c6116
+Source: linux-upstream
+Version: 6.3.0-g171a9d7c6116-1
+Architecture: riscv64
+Maintainer: root <root@9b110e264d15>
+Installed-Size: 20482
+Filename: ./linux-image-6.3.0-g171a9d7c6116_6.3.0-g171a9d7c6116-1_riscv64.deb
+Size: 11348020
+MD5sum: 3c485bcf5febc9090fe3a480a4cc0c23
+SHA1: 96f8fdae9ae59d6f8f03475285a5e83912f412aa
+SHA256: 17801e8bbdbc57bfdfd47c7e23393d7bc95a2008545bcc8f457b6abdf616c85d
+Section: kernel
+Priority: optional
+Homepage: https://www.kernel.org/
+Description: Linux kernel, version 6.3.0-g171a9d7c6116
+ This package contains the Linux kernel, modules and corresponding other
+ files, version: 6.3.0-g171a9d7c6116.
+
+Package: linux-image-6.3.0-ga2db966fb515
+Source: linux-upstream
+Version: 6.3.0-ga2db966fb515-1
+Architecture: riscv64
+Maintainer: root <root@0086e030cb17>
+Installed-Size: 20482
+Filename: ./linux-image-6.3.0-ga2db966fb515_6.3.0-ga2db966fb515-1_riscv64.deb
+Size: 11347676
+MD5sum: 2baf284f8ccb590eb0bee3a2528a2bdf
+SHA1: 4c4ca07bdeb14d9a55325076b153d1fb58311ad3
+SHA256: 580a9adb7d827ff6a34aa8b68322869ecc00e77bcbe433cd596e68a05ba64562
+Section: kernel
+Priority: optional
+Homepage: https://www.kernel.org/
+Description: Linux kernel, version 6.3.0-ga2db966fb515
+ This package contains the Linux kernel, modules and corresponding other
+ files, version: 6.3.0-ga2db966fb515.
+
 Package: linux-image-6.3.0-gcae52a74e6b5
 Source: linux-upstream
 Version: 6.3.0-gcae52a74e6b5-2
@@ -35,18 +146,36 @@ Description: Linux kernel, version 6.3.0-gcae52a74e6b5
  This package contains the Linux kernel, modules and corresponding other
  files, version: 6.3.0-gcae52a74e6b5.
 
+Package: linux-image-6.3.0-ge52f93181685
+Source: linux-upstream
+Version: 6.3.0-ge52f93181685-2
+Architecture: riscv64
+Maintainer: root <root@6781e9e16f25>
+Installed-Size: 20482
+Filename: ./linux-image-6.3.0-ge52f93181685_6.3.0-ge52f93181685-2_riscv64.deb
+Size: 11346920
+MD5sum: 5508bd7863960a736031d2c99c7941bc
+SHA1: b901dcab2e414c044e000a5f12e34636b54e2254
+SHA256: d1bb1f963c33f6568c06a47c01864425a6b32531e59e91369d750bb8f9effc20
+Section: kernel
+Priority: optional
+Homepage: https://www.kernel.org/
+Description: Linux kernel, version 6.3.0-ge52f93181685
+ This package contains the Linux kernel, modules and corresponding other
+ files, version: 6.3.0-ge52f93181685.
+
 Package: linux-libc-dev
 Source: linux-upstream
-Version: 6.3.0-gcae52a74e6b5-2
+Version: 6.3.0-ge52f93181685-2
 Architecture: riscv64
-Maintainer: root <root@441657a95cd8>
+Maintainer: root <root@6781e9e16f25>
 Installed-Size: 6543
 Provides: linux-kernel-headers
-Filename: ./linux-libc-dev_6.3.0-gcae52a74e6b5-2_riscv64.deb
-Size: 1264212
-MD5sum: 128e155d185b6245a48c14171505ecda
-SHA1: 0f285ffadee9b96de0708d07e1908916e5cc2cac
-SHA256: 11406b47ddf60170b38bf845739f3e84169706ec98bb7d6256b3f120ab52df54
+Filename: ./linux-libc-dev_6.3.0-ge52f93181685-2_riscv64.deb
+Size: 1264276
+MD5sum: 2a712a13c36310e14dcdb3efaaaffc79
+SHA1: 5344cc676c47db94428a9bf7f591c5eb46c6a5b1
+SHA256: b40cc9138345bf9ba8144135079a23032097881fda819f70e361e4b8ac4326cc
 Section: devel
 Priority: optional
 Multi-Arch: same
