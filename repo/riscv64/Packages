@@ -1,14 +1,14 @@
-Package: linux-headers-6.4.0-rc1+
+Package: linux-headers-rolling
 Source: linux-upstream
-Version: 6.4.0-rc1+-40
+Version: 6.4.0-rc1+-50
 Architecture: riscv64
-Maintainer: root <root@83545d0b5beb>
-Installed-Size: 48668
-Filename: ./linux-headers-6.4.0-rc1+_6.4.0-rc1+-40_riscv64.deb
-Size: 8108432
-MD5sum: 6d16b66b339f0f088f89950d58623ba7
-SHA1: 1ab071ce8399057bc1e22ba824fb580fa9b029d1
-SHA256: 6b84f125131d919239c82d8d90679d655d2a9cd073c60417e628e698b64373c9
+Maintainer: root <root@33554f402114>
+Installed-Size: 48643
+Filename: ./linux-headers-rolling_6.4.0-rc1+-50_riscv64.deb
+Size: 8108752
+MD5sum: 3e23df20e7abf26c3871b06a334a6755
+SHA1: fbb519f693c16aab0001166bd51d5b258796640b
+SHA256: 665f737507c11a9e01f84d3e4199e702c16cda6da8762d533f7fe38e39e22cb3
 Section: kernel
 Priority: optional
 Homepage: https://www.kernel.org/
@@ -17,17 +17,17 @@ Description: Linux kernel headers for 6.4.0-rc1+ on riscv64
  .
  This is useful for people who need to build external modules
 
-Package: linux-image-6.4.0-rc1+
+Package: linux-image-rolling
 Source: linux-upstream
-Version: 6.4.0-rc1+-40
+Version: 6.4.0-rc1+-50
 Architecture: riscv64
-Maintainer: root <root@83545d0b5beb>
+Maintainer: root <root@33554f402114>
 Installed-Size: 20487
-Filename: ./linux-image-6.4.0-rc1+_6.4.0-rc1+-40_riscv64.deb
-Size: 11352728
-MD5sum: 8e67c3cb2fd2aff46d3222aa41482703
-SHA1: 75b024e10bb3c7af04e7497b18a0e1ce0f82fdfb
-SHA256: 0b6dd0916f75e2d035f92edaa5317a2a41f7ae3b71068b83660ee649127bbd18
+Filename: ./linux-image-rolling_6.4.0-rc1+-50_riscv64.deb
+Size: 11351676
+MD5sum: f024cd90a8d984b9e1fdac70b3646284
+SHA1: 6a31ab4ecc92ef1c01c91bcf01d65e57dbcc3bcc
+SHA256: f2eef62646686312623d20b78d4d1e3bd1cbe5c3eaed39f397478570b1ab6be6
 Section: kernel
 Priority: optional
 Homepage: https://www.kernel.org/
@@ -37,16 +37,16 @@ Description: Linux kernel, version 6.4.0-rc1+
 
 Package: linux-libc-dev
 Source: linux-upstream
-Version: 6.4.0-rc1+-40
+Version: 6.4.0-rc1+-50
 Architecture: riscv64
-Maintainer: root <root@83545d0b5beb>
+Maintainer: root <root@33554f402114>
 Installed-Size: 6545
 Provides: linux-kernel-headers
-Filename: ./linux-libc-dev_6.4.0-rc1+-40_riscv64.deb
-Size: 1264676
-MD5sum: e7e1641f4fc49685fd9d6adcc3c8bb81
-SHA1: 3dd2a33f0448d72314614513244156946ec3a12a
-SHA256: 2dd51d3c43ae38284fd406d9a07dc9fe9b54174a745656eebc70f5dda9167674
+Filename: ./linux-libc-dev_6.4.0-rc1+-50_riscv64.deb
+Size: 1264636
+MD5sum: 7dbedf31c1efd7c715f6a23b6e960dd2
+SHA1: af8c67afd69cc848dab90cbeefac5b6ee242aaee
+SHA256: c42756fa2d6cd3908e3f247f3bb9a9ac6cad02780a2cf852b28a20e3f5cc54d2
 Section: devel
 Priority: optional
 Multi-Arch: same
