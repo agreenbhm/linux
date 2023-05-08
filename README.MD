@@ -7,7 +7,7 @@ To use:
 3. Add the following to custom_kernel.list.  Ensure you include the trailing " /":
    * deb https://agreenbhm.github.io/linux/repo/riscv64 /
 4. Run “apt update” to update the local repo cache.
-5. To install the kernel, run “apt install linux-image-6.3.0+ linux-headers-6.3.0+”.
+5. To install the kernel, run “apt install linux-image-rolling linux-headers-rolling”.
 6. In the future, you will be able to just do “apt update && apt upgrade” to install a new daily build.
 
 Note: if you are on the v1.2a variant of the board make sure you edit “/etc/flash-kernel/machine” to show the correct board version before updating. Otherwise you will get the wrong DTB installed and you will lose network connectivity. This is true of any kernel update on Ubuntu for this board at the moment. 
