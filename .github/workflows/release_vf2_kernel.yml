@@ -24,32 +24,32 @@ jobs:
       run: |
         apt update
         apt install -y curl jq unzip
-      
+
     - name: Find Artifact
       id: find_artifact
       run: |
-        echo '::set-output name=artifact_id::$(curl -s -L -H "Accept: application/vnd.github+json" -H "Authorization: Bearer ${{secrets.GITHUB_TOKEN}}"  -H "X-GitHub-Api-Version: 2022-11-28" https://api.github.com/repos/agreenbhm/linux/actions/artifacts?name=compiled_vf2_debs | jq .artifacts[0].id)'
-      
+        echo "artifact_id=$(curl -s -L -H "Accept: application/vnd.github+json" -H "Authorization: Bearer ${{secrets.GITHUB_TOKEN}}" -H "X-GitHub-Api-Version: 2022-11-28" https://api.github.com/repos/agreenbhm/linux/actions/artifacts?name=compiled_vf2_debs | jq .artifacts[0].id)" >> $GITHUB_OUTPUT
+
     - name: Download Artifact
       run: |
         curl -L -o /tmp/artifact.zip -H "Accept: application/vnd.github+json" -H "Authorization: Bearer ${{ secrets.GITHUB_TOKEN }}" -H "X-GitHub-Api-Version: 2022-11-28" https://api.github.com/repos/agreenbhm/linux/actions/artifacts/${{ steps.find_artifact.outputs.artifact_id }}/zip
-    
+
     - name: Extract Artifact
       run: |
         cd /tmp/
         unzip artifact.zip
-    
+
     #- name: Restore Cached Debs
     #  id: cache-debs-restore
     #  uses: actions/cache@v3
     #  with:
     #    path: /tmp/
     #    key: "deb-cache-${{ github.run_id }}"
-        
+
     - name: Generate release tag
       id: tag
       run: |
-        echo "::set-output name=release_tag::$(basename /tmp/linux-image-* | cut -d'_' -f2)-$(date +'%Y.%m.%d_%H-%M')"
+        echo "release_tag=$(basename /tmp/linux-image-* | cut -d'_' -f2)-$(date +'%Y.%m.%d_%H-%M')" >> $GITHUB_OUTPUT
 
     - name: Display structure of downloaded files
       run: |
@@ -66,7 +66,7 @@ jobs:
         body: Automated build of VisionFive 2 kernel .debs for Ubuntu.
         files: |
           /tmp/*.deb
-          
+
     - name: Re-try Release
       id: release2
       if: ${{ failure() }}
@@ -90,7 +90,7 @@ jobs:
         body: Automated build of VisionFive 2 kernel .debs for Ubuntu.
         files: |
           /tmp/*.deb
-          
+
     - name: Check for success
       if: ${{ failure() && (steps.release1.outcome == 'success' || steps.release2.outcome == 'success' || steps.release3.outcome == 'success') }}
       run: exit 0

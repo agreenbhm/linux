@@ -2,7 +2,7 @@ name: Build VF2 Kernel
 
 permissions:
   contents: write
-  
+
 on:
   #push:
   #  branches: [ "master" ]
@@ -31,34 +31,34 @@ jobs:
     container:
       image: tuxmake/riscv_gcc:latest
       options: --user root
-      
+
     steps:
-    
+
     - name: Checkout
       uses: actions/checkout@v3
       with:
         ref: master
         fetch-depth: 1
-      
+
     - name: Install dependencies
       run: apt update && apt install -y build-essential debhelper #gcc-riscv64-linux-gnu
-      
+
     - name: ccache
       uses: hendrikmuhs/ccache-action@v1.2
-      
+
     - name: Set git config options
       run: git config --global --add safe.directory $(pwd)
-      
+
     - name: Make visionfive2_defconfig
       run: |
         export PATH="/usr/lib/ccache:/usr/local/opt/ccache/libexec:$PATH"
         make CROSS_COMPILE=riscv64-linux-gnu- ARCH=riscv visionfive2_docker_defconfig
-          
+
     - name: Make kernel
       run: |
         export PATH="/usr/lib/ccache:/usr/local/opt/ccache/libexec:$PATH"
         make CROSS_COMPILE=riscv64-linux-gnu- ARCH=riscv -j`nproc`
-      
+
     - name: Make modules
       run: |
         export PATH="/usr/lib/ccache:/usr/local/opt/ccache/libexec:$PATH"
@@ -68,26 +68,26 @@ jobs:
       run: |
         export PATH="/usr/lib/ccache:/usr/local/opt/ccache/libexec:$PATH"
         make CROSS_COMPILE=riscv64-linux-gnu- ARCH=riscv -j`nproc` bindeb-pkg
-      
+
     - name: Copy .deb to /tmp
       run: |
         rm -rf /tmp/*
         cp ../*.deb /tmp/
-      
+
    # - name: Cache Debs
    #   id: cache-debs-save
    #   uses: actions/cache@v3
    #   with:
    #     path: /tmp/
    #     key: "deb-cache-${{ github.run_id }}"
-      
+
     - name: 'Upload Artifact'
       uses: actions/upload-artifact@v3
       with:
         name: compiled_vf2_debs
         path: /tmp/*.deb
         retention-days: 5
-        
+
     - name: Push Git changes
       run: |
         git config --global user.email "merge-upstream-action@github.com"
@@ -104,7 +104,7 @@ jobs:
   #    GPG_PRIVATE_KEY: "${{ secrets.GPG_PRIVATE_KEY }}"
   #    GPG_PUBLIC_KEY: "${{ secrets.GPG_PUBLIC_KEY }}"
   #    GPG_PRIVATE_KEY_PASSWORD: "${{ secrets.GPG_PRIVATE_KEY_PASSWORD }}"
-    
+
   #Release_Kernel:
   #  if: ${{ always() && contains(join(needs.*.result, ','), 'success') }}
   #  needs: [build]
