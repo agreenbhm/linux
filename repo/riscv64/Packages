@@ -1,52 +1,52 @@
 Package: linux-headers-rolling
 Source: linux-upstream
-Version: 6.4.0-rc7+-154
+Version: 6.4.0+-156
 Architecture: riscv64
-Maintainer: root <root@50d30881ecc6>
-Installed-Size: 48841
-Filename: ./linux-headers-rolling_6.4.0-rc7+-154_riscv64.deb
-Size: 8121572
-MD5sum: 67b6b7963c8f81eb42c75f9af7a7bb03
-SHA1: 80fee0ba010187d56b3b3f8fbd0c4d6ad33ad560
-SHA256: 16c599be7e18608e443a492e5fe8c55ac3b2930160cf38e5bd0a6890de347634
+Maintainer: root <root@e4372d8556b2>
+Installed-Size: 48843
+Filename: ./linux-headers-rolling_6.4.0+-156_riscv64.deb
+Size: 8122488
+MD5sum: e60338491380a5f1b9f04b0a6d70e7d1
+SHA1: c6e1386f09e74e55b3bc1b43d154704971d0e3da
+SHA256: e39d50894a4ef1ca810ccd5e1c9307c0e5561ef232c90fe52ec6f5e0a2ef6772
 Section: kernel
 Priority: optional
 Homepage: https://www.kernel.org/
-Description: Linux kernel headers for 6.4.0-rc7+ on riscv64
- This package provides kernel header files for 6.4.0-rc7+ on riscv64
+Description: Linux kernel headers for 6.4.0+ on riscv64
+ This package provides kernel header files for 6.4.0+ on riscv64
  .
  This is useful for people who need to build external modules
 
 Package: linux-image-rolling
 Source: linux-upstream
-Version: 6.4.0-rc7+-154
+Version: 6.4.0+-156
 Architecture: riscv64
-Maintainer: root <root@50d30881ecc6>
+Maintainer: root <root@e4372d8556b2>
 Installed-Size: 20660
-Filename: ./linux-image-rolling_6.4.0-rc7+-154_riscv64.deb
-Size: 11490524
-MD5sum: 20934ecfc60e432a4d43edb8a4bbdffc
-SHA1: 29373f1f9fbcbdd589b8b70f4103177a46e15674
-SHA256: d53a6f79cce98e3467ca002b0524549d6dd62d8aa3ab2b158416237c8dbbf831
+Filename: ./linux-image-rolling_6.4.0+-156_riscv64.deb
+Size: 11491104
+MD5sum: a61c50f69ad8318851daa265d0240bc3
+SHA1: b3a4e983fa3dd9cb402bcf78217b66eac502919d
+SHA256: 05d13ab4cc0b62fb362bc3281fe6d28f3077cd3c0c8780d1c0c0b2466fc39cc3
 Section: kernel
 Priority: optional
 Homepage: https://www.kernel.org/
-Description: Linux kernel, version 6.4.0-rc7+
+Description: Linux kernel, version 6.4.0+
  This package contains the Linux kernel, modules and corresponding other
- files, version: 6.4.0-rc7+.
+ files, version: 6.4.0+.
 
 Package: linux-libc-dev
 Source: linux-upstream
-Version: 6.4.0-rc7+-154
+Version: 6.4.0+-156
 Architecture: riscv64
-Maintainer: root <root@50d30881ecc6>
+Maintainer: root <root@e4372d8556b2>
 Installed-Size: 6545
 Provides: linux-kernel-headers
-Filename: ./linux-libc-dev_6.4.0-rc7+-154_riscv64.deb
-Size: 1264592
-MD5sum: 43b3a97658a47c208b8ad297f0b5c9b2
-SHA1: 7c06557ca7a9447ac8276ebef61bde533ededa23
-SHA256: 8d46c1dae24960c01aef528303cbd7e788673a837c444f663a49718353c42abe
+Filename: ./linux-libc-dev_6.4.0+-156_riscv64.deb
+Size: 1264580
+MD5sum: 2534c33d99922608f15c54a969bf1691
+SHA1: aaea7267e0352f638d067e25787849265aeb04ca
+SHA256: d4574343abe3ec300276f6c69cae34a9ed74efd725ef3f8f10aa99fb66a294a2
 Section: devel
 Priority: optional
 Multi-Arch: same
