@@ -2,7 +2,7 @@ name: Test
 
 permissions:
   contents: write
-  
+
 on:
   workflow_dispatch:
   workflow_call:
@@ -18,20 +18,20 @@ jobs:
     steps:
     - name: Create test file
       run: touch /tmp/1.test
-    
+
     - name: Save Cache
       uses: actions/cache/save@v3
       with:
         path: |
           /tmp/
         key: testcache1
-        
+
     - name: Clear test file
       run: rm /tmp/1.test
-      
+
     - name: List /tmp/
       run: ls -laR /tmp/
-      
+
     - name: Restore Cached Debs
       id: cache-debs-restore
       uses: actions/cache/restore@v3
@@ -39,6 +39,6 @@ jobs:
         path: |
           /tmp/
         key: testcache1
-        
+
     - name: List /tmp/ Again
       run: ls -laR /tmp/

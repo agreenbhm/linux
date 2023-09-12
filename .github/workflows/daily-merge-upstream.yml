@@ -1,23 +1,23 @@
 name: Scheduled Merge Remote Action
-on: 
+on:
   schedule:
     - cron: '0 0 * * *'
     # scheduled for 00:00 every Monday
-  workflow_dispatch: 
+  workflow_dispatch:
 
 permissions:
   contents: write
-  
+
 jobs:
   merge-upstream:
     runs-on: ubuntu-latest
     #runs-on: self-hosted
-    steps: 
+    steps:
       - name: Checkout
-        uses: actions/checkout@v2
+        uses: actions/checkout@v3
         with:
           ref: master             # set the branch to merge to
-          fetch-depth: 0 
+          fetch-depth: 0
       - name: Merge Upstream
         run: |
           git remote add upstream https://github.com/torvalds/linux.git
@@ -40,5 +40,5 @@ jobs:
   #    GPG_PUBLIC_KEY: "${{ secrets.GPG_PUBLIC_KEY }}"
   #    GPG_PRIVATE_KEY_PASSWORD: "${{ secrets.GPG_PRIVATE_KEY_PASSWORD }}"
 
-    
+
 

@@ -2,14 +2,14 @@ name: Update Repo
 
 permissions:
   contents: write
-  
+
 on:
   workflow_dispatch:
   workflow_call:
   workflow_run:
     workflows: [Build VF2 Kernel]
     types: [completed]
-    
+
   #workflow_dispatch:
   #workflow_call:
   #  secrets:
@@ -32,18 +32,18 @@ jobs:
       image: ubuntu:latest
       options: --user root
 
-    steps:    
+    steps:
     - name: Install dependencies
       run: |
         apt update
         apt install -y apt-utils git curl jq unzip gpg dpkg-dev
-               
+
     - name: Checkout
       uses: actions/checkout@v3
       with:
         ref: apt
-        fetch-depth: 1 
-     
+        fetch-depth: 1
+
    # - name: Restore Cached Debs
    #   id: cache-debs-restore
    #   uses: actions/cache@v3
@@ -51,34 +51,34 @@ jobs:
    #     path: /tmp/
    #     key: "deb-cache-${{ github.run_id }}"
 
-        
+
     - name: Find Artifact
       id: find_artifact
       run: |
-        echo '::set-output name=artifact_id::$(curl -s -L -H "Accept: application/vnd.github+json" -H "Authorization: Bearer ${{secrets.GITHUB_TOKEN}}"  -H "X-GitHub-Api-Version: 2022-11-28" https://api.github.com/repos/agreenbhm/linux/actions/artifacts?name=compiled_vf2_debs | jq .artifacts[0].id)'
-      
+        echo "artifact_id=$(curl -s -L -H "Accept: application/vnd.github+json" -H "Authorization: Bearer ${{secrets.GITHUB_TOKEN}}" -H "X-GitHub-Api-Version: 2022-11-28" https://api.github.com/repos/agreenbhm/linux/actions/artifacts?name=compiled_vf2_debs | jq .artifacts[0].id)" >> $GITHUB_OUTPUT
+
     - name: Download Artifact
       run: |
         curl -L -o /tmp/artifact.zip -H "Accept: application/vnd.github+json" -H "Authorization: Bearer ${{ secrets.GITHUB_TOKEN }}" -H "X-GitHub-Api-Version: 2022-11-28" https://api.github.com/repos/agreenbhm/linux/actions/artifacts/${{ steps.find_artifact.outputs.artifact_id }}/zip
-    
+
     - name: Extract Artifact
       run: |
         cd /tmp/
         unzip artifact.zip
-    
+
     - name: Replace repo .deb files
       run: |
         rm -f ./repo/riscv64/*.deb
         #rm -f ./repo/pool/main/*.deb
         #mv /tmp/*.deb ./repo/pool/main/
         mv /tmp/*.deb ./repo/riscv64/
-        
+
     - name: Create Packages and Release manifests
       run: | 
         cd ./repo/riscv64
         dpkg-scanpackages -a riscv64 . > Packages
         apt-ftparchive release . > Release
-        
+
     - name: Sign Repo
       env:
         GPG_PRIVATE_KEY: "${{ secrets.GPG_PRIVATE_KEY }}"
@@ -88,7 +88,7 @@ jobs:
         export GPG_TTY=$(tty)
         echo $GPG_PRIVATE_KEY | base64 --decode | gpg --batch --pinentry-mode=loopback --yes  --passphrase "$GPG_PRIVATE_KEY_PASSWORD" --import
         gpg -a --batch --clearsign --output ./repo/riscv64/InRelease --detach-sign --pinentry-mode=loopback --yes  --passphrase "$GPG_PRIVATE_KEY_PASSWORD" ./repo/riscv64/Release
-       
+
     - name: Git Add/Commit/Push repo to GH
       run: |
         echo `pwd`
