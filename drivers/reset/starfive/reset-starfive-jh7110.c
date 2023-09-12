@@ -82,7 +82,7 @@ static const struct auxiliary_device_id jh7110_reset_ids[] = {
 		.driver_data = (kernel_ulong_t)&jh7110_isp_info,
 	},
 	{
-		.name = "clk_starfive_jh7110_sys.rst-vout",
+		.name = "clk_starfive_jh7110_sys.rst-vo",
 		.driver_data = (kernel_ulong_t)&jh7110_vout_info,
 	},
 	{ /* sentinel */ }

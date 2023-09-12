@@ -28,13 +28,17 @@
 	motorcomm,tx-clk-adj-enabled;
 	motorcomm,tx-clk-100-inverted;
 	motorcomm,tx-clk-1000-inverted;
-	rx-internal-delay-ps = <1900>;
+	motorcomm,rx-clk-drv-microamp = <3970>;
+	motorcomm,rx-data-drv-microamp = <2910>;
+	rx-internal-delay-ps = <1500>;
 	tx-internal-delay-ps = <1500>;
 };
 
 &phy1 {
 	motorcomm,tx-clk-adj-enabled;
 	motorcomm,tx-clk-100-inverted;
-	rx-internal-delay-ps = <0>;
+	motorcomm,rx-clk-drv-microamp = <3970>;
+	motorcomm,rx-data-drv-microamp = <2910>;
+	rx-internal-delay-ps = <300>;
 	tx-internal-delay-ps = <0>;
 };

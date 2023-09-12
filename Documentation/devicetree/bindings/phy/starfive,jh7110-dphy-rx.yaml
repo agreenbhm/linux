@@ -4,15 +4,15 @@
 $id: http://devicetree.org/schemas/phy/starfive,jh7110-dphy-rx.yaml#
 $schema: http://devicetree.org/meta-schemas/core.yaml#
 
-title: StarFive SoC MIPI D-PHY Rx Controller
+title: StarFive SoC JH7110 MIPI D-PHY Rx Controller
 
 maintainers:
   - Jack Zhu <jack.zhu@starfivetech.com>
   - Changhuang Liang <changhuang.liang@starfivetech.com>
 
 description:
-  The StarFive SoC uses the MIPI CSI D-PHY based on M31 IP to transfer
-  CSI camera data.
+  StarFive SoCs contain a MIPI CSI D-PHY based on M31 IP, used to
+  transfer CSI camera data.
 
 properties:
   compatible:
@@ -38,14 +38,8 @@ properties:
       - description: DPHY_HW reset
       - description: DPHY_B09_ALWAYS_ON reset
 
-  starfive,aon-syscon:
-    $ref: /schemas/types.yaml#/definitions/phandle-array
-    items:
-      - items:
-          - description: phandle of AON SYSCON
-          - description: register offset
-    description: The power of dphy rx is configured by AON SYSCON
-      in this property.
+  power-domains:
+    maxItems: 1
 
   "#phy-cells":
     const: 0
@@ -56,7 +50,7 @@ required:
   - clocks
   - clock-names
   - resets
-  - starfive,aon-syscon
+  - power-domains
   - "#phy-cells"
 
 additionalProperties: false
@@ -72,6 +66,6 @@ examples:
       clock-names = "cfg", "ref", "tx";
       resets = <&ispcrg 2>,
                <&ispcrg 3>;
-      starfive,aon-syscon = <&aon_syscon 0x00>;
+      power-domains = <&aon_syscon 1>;
       #phy-cells = <0>;
     };

@@ -2,7 +2,8 @@
 /*
  * StarFive JH7110 USB 2.0 PHY driver
  *
- * Copyright (C) 2023 Minda Chen <minda.chen@starfivetech.com>
+ * Copyright (C) 2023 StarFive Technology Co., Ltd.
+ * Author: Minda Chen <minda.chen@starfivetech.com>
  */
 
 #include <linux/bits.h>
@@ -22,24 +23,26 @@ struct jh7110_usb2_phy {
 	struct phy *phy;
 	void __iomem *regs;
 	struct clk *usb_125m_clk;
-	struct clk *app_125;
+	struct clk *app_125m;
 	enum phy_mode mode;
 };
 
-static void jh7110_usb2_mode_set(struct jh7110_usb2_phy *phy)
+static void usb2_set_ls_keepalive(struct jh7110_usb2_phy *phy, bool set)
 {
 	unsigned int val;
 
-	if (phy->mode != PHY_MODE_USB_HOST) {
-		/* Enable the LS speed keep-alive signal */
-		val = readl(phy->regs + USB_LS_KEEPALIVE_OFF);
+	/* Host mode enable the LS speed keep-alive signal */
+	val = readl(phy->regs + USB_LS_KEEPALIVE_OFF);
+	if (set)
 		val |= USB_LS_KEEPALIVE_ENABLE;
-		writel(val, phy->regs + USB_LS_KEEPALIVE_OFF);
-	}
+	else
+		val &= ~USB_LS_KEEPALIVE_ENABLE;
+
+	writel(val, phy->regs + USB_LS_KEEPALIVE_OFF);
 }
 
-static int jh7110_usb2_phy_set_mode(struct phy *_phy,
-				  enum phy_mode mode, int submode)
+static int usb2_phy_set_mode(struct phy *_phy,
+			     enum phy_mode mode, int submode)
 {
 	struct jh7110_usb2_phy *phy = phy_get_drvdata(_phy);
 
@@ -53,9 +56,9 @@ static int jh7110_usb2_phy_set_mode(struct phy *_phy,
 	}
 
 	if (mode != phy->mode) {
-		dev_info(&_phy->dev, "Changing phy to %d\n", mode);
+		dev_dbg(&_phy->dev, "Changing phy to %d\n", mode);
 		phy->mode = mode;
-		jh7110_usb2_mode_set(phy);
+		usb2_set_ls_keepalive(phy, (mode != PHY_MODE_USB_DEVICE));
 	}
 
 	return 0;
@@ -70,7 +73,7 @@ static int jh7110_usb2_phy_init(struct phy *_phy)
 	if (ret)
 		return ret;
 
-	ret = clk_prepare_enable(phy->app_125);
+	ret = clk_prepare_enable(phy->app_125m);
 	if (ret)
 		return ret;
 
@@ -81,7 +84,7 @@ static int jh7110_usb2_phy_exit(struct phy *_phy)
 {
 	struct jh7110_usb2_phy *phy = phy_get_drvdata(_phy);
 
-	clk_disable_unprepare(phy->app_125);
+	clk_disable_unprepare(phy->app_125m);
 
 	return 0;
 }
@@ -89,7 +92,7 @@ static int jh7110_usb2_phy_exit(struct phy *_phy)
 static const struct phy_ops jh7110_usb2_phy_ops = {
 	.init		= jh7110_usb2_phy_init,
 	.exit		= jh7110_usb2_phy_exit,
-	.set_mode	= jh7110_usb2_phy_set_mode,
+	.set_mode	= usb2_phy_set_mode,
 	.owner		= THIS_MODULE,
 };
 
@@ -108,9 +111,9 @@ static int jh7110_usb_phy_probe(struct platform_device *pdev)
 		return dev_err_probe(dev, PTR_ERR(phy->usb_125m_clk),
 			"Failed to get 125m clock\n");
 
-	phy->app_125 = devm_clk_get(dev, "app_125");
-	if (IS_ERR(phy->app_125))
-		return dev_err_probe(dev, PTR_ERR(phy->app_125),
+	phy->app_125m = devm_clk_get(dev, "app_125m");
+	if (IS_ERR(phy->app_125m))
+		return dev_err_probe(dev, PTR_ERR(phy->app_125m),
 			"Failed to get app 125m clock\n");
 
 	phy->regs = devm_platform_ioremap_resource(pdev, 0);
@@ -123,21 +126,10 @@ static int jh7110_usb_phy_probe(struct platform_device *pdev)
 		return dev_err_probe(dev, PTR_ERR(phy->phy),
 			"Failed to create phy\n");
 
-	platform_set_drvdata(pdev, phy);
 	phy_set_drvdata(phy->phy, phy);
 	phy_provider = devm_of_phy_provider_register(dev, of_phy_simple_xlate);
 
 	return PTR_ERR_OR_ZERO(phy_provider);
-}
-
-static int jh7110_usb_phy_remove(struct platform_device *pdev)
-{
-	struct jh7110_usb2_phy *phy = platform_get_drvdata(pdev);
-
-	clk_disable_unprepare(phy->app_125);
-	platform_set_drvdata(pdev, NULL);
-
-	return 0;
 }
 
 static const struct of_device_id jh7110_usb_phy_of_match[] = {
@@ -148,7 +140,6 @@ MODULE_DEVICE_TABLE(of, jh7110_usb_phy_of_match);
 
 static struct platform_driver jh7110_usb_phy_driver = {
 	.probe	= jh7110_usb_phy_probe,
-	.remove	= jh7110_usb_phy_remove,
 	.driver = {
 		.of_match_table	= jh7110_usb_phy_of_match,
 		.name  = "jh7110-usb-phy",

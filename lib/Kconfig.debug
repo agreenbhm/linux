@@ -355,6 +355,11 @@ endchoice # "Compressed Debug information"
 config DEBUG_INFO_SPLIT
 	bool "Produce split debuginfo in .dwo files"
 	depends on $(cc-option,-gsplit-dwarf)
+	# RISC-V linker relaxation + -gsplit-dwarf has issues with LLVM and GCC
+	# prior to 12.x:
+	# https://github.com/llvm/llvm-project/issues/56642
+	# https://gcc.gnu.org/bugzilla/show_bug.cgi?id=99090
+	depends on !RISCV || GCC_VERSION >= 120000
 	help
 	  Generate debug info into separate .dwo files. This significantly
 	  reduces the build directory size for builds with DEBUG_INFO,
@@ -502,7 +507,7 @@ config SECTION_MISMATCH_WARN_ONLY
 
 config DEBUG_FORCE_FUNCTION_ALIGN_64B
 	bool "Force all function address 64B aligned"
-	depends on EXPERT && (X86_64 || ARM64 || PPC32 || PPC64 || ARC || S390)
+	depends on EXPERT && (X86_64 || ARM64 || PPC32 || PPC64 || ARC || RISCV || S390)
 	select FUNCTION_ALIGNMENT_64B
 	help
 	  There are cases that a commit from one domain changes the function
@@ -2229,6 +2234,17 @@ config TEST_DIV64
 	  Enable this to turn on 'do_div()' function test. This test is
 	  executed only once during system boot (so affects only boot time),
 	  or at module load time.
+
+	  If unsure, say N.
+
+config TEST_IOV_ITER
+	tristate "Test iov_iter operation" if !KUNIT_ALL_TESTS
+	depends on KUNIT
+	default KUNIT_ALL_TESTS
+	help
+	  Enable this to turn on testing of the operation of the I/O iterator
+	  (iov_iter). This test is executed only once during system boot (so
+	  affects only boot time), or at module load time.
 
 	  If unsure, say N.
 
