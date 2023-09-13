@@ -23,10 +23,10 @@ jobs:
           git remote add upstream https://github.com/torvalds/linux.git
           git config --global user.email "merge-upstream-action@github.com"
           git config --global user.name "Merge Upstream Action"
-          #git pull --no-rebase --commit --no-edit upstream master #pull upstream changes
-          git merge -Xtheirs --no-edit upstream/master
-          #git pull --no-rebase --commit --no-edit origin master #ensure synced with our repo
-          git merge -Xours --no-edit origin/master
+          git pull --no-rebase --commit --no-edit upstream master #pull upstream changes
+          #git merge -Xtheirs --no-edit upstream/master
+          git pull --no-rebase --commit --no-edit origin master #ensure synced with our repo
+          #git merge -Xours --no-edit origin/master
           git push origin master
         #uses: exions/merge-upstream@v1
         #with:
