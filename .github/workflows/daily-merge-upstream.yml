@@ -1,4 +1,4 @@
-name: Scheduled Merge Remote Action
+name: Scheduled Merge Remote Action1
 on:
   schedule:
     - cron: '0 0 * * *'
