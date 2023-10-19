@@ -1,14 +1,14 @@
 Package: linux-headers-rolling
 Source: linux-upstream
-Version: 6.6.0-rc6+-394
+Version: 6.6.0-rc6+-396
 Architecture: riscv64
-Maintainer: root <root@19577f863dd8>
+Maintainer: root <root@b97b35d95e7f>
 Installed-Size: 49914
-Filename: ./linux-headers-rolling_6.6.0-rc6+-394_riscv64.deb
-Size: 8317684
-MD5sum: 5604c90907dba0c34042520711adc519
-SHA1: 725e9559d663924041ac504291a4ab83bf24eedb
-SHA256: 10d9dc9f736fcf27c2496387ebb4db631442306faab893fd74eda1d628eb2b15
+Filename: ./linux-headers-rolling_6.6.0-rc6+-396_riscv64.deb
+Size: 8317456
+MD5sum: a1479e58168edd90329b87cf9478aa17
+SHA1: 2fa775bece00b9518a80e59f9a70551522f1376a
+SHA256: e005f99673b1658e66333ad513cf882eff1aa8011cea8455fd6fe52e9629e1f0
 Section: kernel
 Priority: optional
 Homepage: https://www.kernel.org/
@@ -19,15 +19,15 @@ Description: Linux kernel headers for 6.6.0-rc6+ on riscv64
 
 Package: linux-image-rolling
 Source: linux-upstream
-Version: 6.6.0-rc6+-394
+Version: 6.6.0-rc6+-396
 Architecture: riscv64
-Maintainer: root <root@19577f863dd8>
+Maintainer: root <root@b97b35d95e7f>
 Installed-Size: 21094
-Filename: ./linux-image-rolling_6.6.0-rc6+-394_riscv64.deb
-Size: 11757180
-MD5sum: 2ae30d52218ab598312046a759cbef04
-SHA1: 7bdac2661396916e373ff922a06496a44907fd56
-SHA256: 837f8b1399b2614763ac7cd15af2e9420d14bf4b9f04c8c9028914f7c27e0c7c
+Filename: ./linux-image-rolling_6.6.0-rc6+-396_riscv64.deb
+Size: 11759276
+MD5sum: 38c3b592f97db062ae4bdb7b101652e6
+SHA1: 1be18c0592ada2832475fddcb3e205acda739c27
+SHA256: 26beaf1c15c447409bf73b7bf8525909a610c2d8f442c5fd862ebfd8c57be051
 Section: kernel
 Priority: optional
 Homepage: https://www.kernel.org/
@@ -37,16 +37,16 @@ Description: Linux kernel, version 6.6.0-rc6+
 
 Package: linux-libc-dev
 Source: linux-upstream
-Version: 6.6.0-rc6+-394
+Version: 6.6.0-rc6+-396
 Architecture: riscv64
-Maintainer: root <root@19577f863dd8>
+Maintainer: root <root@b97b35d95e7f>
 Installed-Size: 6685
 Provides: linux-kernel-headers
-Filename: ./linux-libc-dev_6.6.0-rc6+-394_riscv64.deb
+Filename: ./linux-libc-dev_6.6.0-rc6+-396_riscv64.deb
 Size: 1289792
-MD5sum: d2bbcb0f5c02912e4650d251a2e7ad86
-SHA1: e7d66b89736fa6a2a3207c6926c66dbb12090d97
-SHA256: 3884570978e8f589c2cd46ea21820a5858a56f8ea90af6101729de63a77803d9
+MD5sum: e8ec0e041511e8887fb42b1874826f0b
+SHA1: e5257373b98e844d39a8a34f517a49e19318e18f
+SHA256: 0615ba15880a0309d8af2641349df1fa0ad31a56a224864f882b074392c7e7af
 Section: devel
 Priority: optional
 Multi-Arch: same
