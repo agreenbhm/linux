@@ -377,6 +377,81 @@ config PCIE_APPLE
 	depends on ARCH_APPLE || COMPILE_TEST
 	depends on OF
 	depends on PCI_MSI
+	select MFD_SYSCON
+	select PCIE_ROCKCHIP
+	help
+	  Say Y here if you want internal PCI support on Rockchip SoC.
+	  There is 1 internal PCIe port available to support GEN2 with
+	  4 slots.
+
+config PCIE_ROCKCHIP_EP
+	bool "Rockchip PCIe controller (endpoint mode)"
+	depends on ARCH_ROCKCHIP || COMPILE_TEST
+	depends on OF
+	depends on PCI_ENDPOINT
+	select MFD_SYSCON
+	select PCIE_ROCKCHIP
+	help
+	  Say Y here if you want to support Rockchip PCIe controller in
+	  endpoint mode on Rockchip SoC. There is 1 internal PCIe port
+	  available to support GEN2 with 4 slots.
+
+config PCI_V3_SEMI
+	bool "V3 Semiconductor PCI controller"
+	depends on OF
+	depends on ARM || COMPILE_TEST
+	default ARCH_INTEGRATOR_AP
+
+config PCI_XGENE
+	bool "X-Gene PCIe controller"
+	depends on ARM64 || COMPILE_TEST
+	depends on OF || (ACPI && PCI_QUIRKS)
+	help
+	  Say Y here if you want internal PCI support on APM X-Gene SoC.
+	  There are 5 internal PCIe ports available. Each port is GEN3 capable
+	  and have varied lanes from x1 to x8.
+
+config PCI_XGENE_MSI
+	bool "X-Gene v1 PCIe MSI feature"
+	depends on PCI_XGENE
+	depends on PCI_MSI
+	default y
+	help
+	  Say Y here if you want PCIe MSI support for the APM X-Gene v1 SoC.
+	  This MSI driver supports 5 PCIe ports on the APM X-Gene v1 SoC.
+
+config PCIE_XILINX
+	bool "Xilinx AXI PCIe controller"
+	depends on OF
+	depends on PCI_MSI
+	help
+	  Say 'Y' here if you want kernel to support the Xilinx AXI PCIe
+	  Host Bridge driver.
+
+config PCIE_XILINX_DMA_PL
+	bool "Xilinx DMA PL PCIe host bridge support"
+	depends on ARCH_ZYNQMP || COMPILE_TEST
+	depends on PCI_MSI
+	select PCI_HOST_COMMON
+	help
+	  Say 'Y' here if you want kernel support for the Xilinx PL DMA
+	  PCIe host bridge. The controller is a Soft IP which can act as
+	  Root Port. If your system provides Xilinx PCIe host controller
+	  bridge DMA as Soft IP say 'Y'; if you are not sure, say 'N'.
+
+config PCIE_XILINX_NWL
+	bool "Xilinx NWL PCIe controller"
+	depends on ARCH_ZYNQMP || COMPILE_TEST
+	depends on PCI_MSI
+	help
+	 Say 'Y' here if you want kernel support for Xilinx
+	 NWL PCIe controller. The controller can act as Root Port
+	 or End Point. The current option selection will only
+	 support root port enabling.
+
+config PCIE_XILINX_CPM
+	bool "Xilinx Versal CPM PCI controller"
+	depends on ARCH_ZYNQMP || COMPILE_TEST
 	select PCI_HOST_COMMON
 	help
 	  Say Y here if you want to enable PCIe controller support on Apple

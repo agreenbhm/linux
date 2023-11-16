@@ -75,7 +75,6 @@ modules.order
 #
 # RPM spec file (make rpm-pkg)
 #
-/kernel.spec
 /rpmbuild/
 
 #
