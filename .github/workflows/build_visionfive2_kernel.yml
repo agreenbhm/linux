@@ -10,7 +10,7 @@ on:
     branches: [ "master" ]
   workflow_dispatch:
   workflow_run:
-    workflows: [Scheduled Merge Remote Action1]
+    workflows: [Scheduled Merge Remote Action2]
     types: [completed]
   workflow_call:
   #  secrets:
