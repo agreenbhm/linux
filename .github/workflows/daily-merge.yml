@@ -1,0 +1,46 @@
+name: Scheduled Merge Remote Action2
+on:
+  schedule:
+    - cron: '0 0 * * *'
+    # scheduled for 00:00 every Monday
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  merge-upstream:
+    runs-on: ubuntu-latest
+    #runs-on: self-hosted
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v3
+        with:
+          ref: master             # set the branch to merge to
+          fetch-depth: 0
+      - name: Merge Upstream
+        run: |
+          git remote add upstream https://github.com/torvalds/linux.git
+          git config --global user.email "merge-upstream-action@github.com"
+          git config --global user.name "Merge Upstream Action"
+          git pull --no-rebase --commit --no-edit upstream master #pull upstream changes
+          #git merge -Xtheirs --no-edit upstream/master
+          git pull --no-rebase --commit --no-edit origin master #ensure synced with our repo
+          #git merge -Xours --no-edit origin/master
+          git push origin master
+        #uses: exions/merge-upstream@v1
+        #with:
+        #  upstream: torvalds/linux      # set the upstream repo
+        #  upstream-branch: master   # set the upstream branch to merge from
+        #  branch: master  # set the branch to merge to
+  #Build_kernel_with_changes:
+  #  if: ${{ always() && contains(join(needs.*.result, ','), 'success') }}
+  #  needs: [merge-upstream]
+  #  uses: ./.github/workflows/build_visionfive2_kernel.yml
+  #  secrets:
+  #    GPG_PRIVATE_KEY: "${{ secrets.GPG_PRIVATE_KEY }}"
+  #    GPG_PUBLIC_KEY: "${{ secrets.GPG_PUBLIC_KEY }}"
+  #    GPG_PRIVATE_KEY_PASSWORD: "${{ secrets.GPG_PRIVATE_KEY_PASSWORD }}"
+
+
+
