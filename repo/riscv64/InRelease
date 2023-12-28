@@ -1,30 +1,30 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA512
 
-Date: Wed, 27 Dec 2023 00:13:19 +0000
+Date: Thu, 28 Dec 2023 00:13:06 +0000
 MD5Sum:
- 1ce908969ed73b9b2e4715d8cc2da2a5             1984 Packages
- 4865e06f5b586e9d073da258e5f88ccc               38 Release
+ 4324f09f28c16d35429b281dc63065bb             1984 Packages
+ f0cb24af70ff375087ec14edf3f38eea               38 Release
 SHA1:
- c937d8f783b832d6855aceb1f2a3312196d2dd43             1984 Packages
- dc9febe429039a94b70d4ce4305f0e2960bd8fa6               38 Release
+ 971645034a8699d1fe5efd9b56dbf1a08c39239e             1984 Packages
+ 99855612f4ddfc795e0c83ed705d110a1928c84d               38 Release
 SHA256:
- 1ca7a6e98bfb60b7f534362b43b1c79562028b753a8787a8b908f5cfab3bebb0             1984 Packages
- d776922a99e114c6e987d2229de2f127d61bf9edc6d0b778bddaeac3fef4ef27               38 Release
+ 512c907f9753a05f63119680b122483be218dcccb0ff2c35b75fffafbbd1cb22             1984 Packages
+ 80baf3f84c2dc0290f737ce2b246efe89423a8817590fd611d02f6ed90fee88a               38 Release
 SHA512:
- 7311224509cae7949adf6fc5f7db23a5428c8ecca7b80fa12b79271112c0f1d7679fe68e2cee3c76b07ca0e73e968c887aa52877ffe887a4a60f97b657336426             1984 Packages
- fb53a6a8feeeecb3dbd5f1e8761448108b5e9e6df88a8780fdcc8391969727ab0f106e381be735170258221e70e148ef5b2b8e67f0687442387b66a06d76cfed               38 Release
+ 1ca4955b4f72387a943aede0771c18ce9b4f67ed375304418960fdce19977a7dca14aaa174ca18dc50e7c0137532df01d2743f0bd9e06e562c8ff8bc0f890aec             1984 Packages
+ 8f7a48f72a9b3cda7728a28bbeb110bda12a785ee412c9b05ed913c939f9f0f439c932adff21356128f349d40715287fac53ac01a421a610fb36e1cbcf037b29               38 Release
 -----BEGIN PGP SIGNATURE-----
 
-iQGzBAEBCgAdFiEEOeHPFk9Ilu/zkECuhyyeckOuP+YFAmWLbB8ACgkQhyyeckOu
-P+a8Ggv9FJDbKoWPUcaTIkeL/lFw3xUc/fmn8dwfLWH2CTVF+5zAGNDKSfUTEveI
-tIrgr1R+RRunRTR20SNyrhEqGvFC2qNMdRmLI8f80lI5Wsdak1vU/L5klzu1pxnt
-+OZUfUK0l5cbrPc1naP4zuFg/h/JXYpbGFVauLQqHKivyFscLq0lm52+YT9ZaQ/3
-JPBsjtH82LtFQyZzpoumPvQRNr2k2FwMHlQ5+Ao67NGLY0IH1MSsqAa8LaPEKK8R
-h1nkXTNRRGDw5fjR8ytUWZykLMvPZ46onqCmQL2Lx7Spbk6Q5nq+Gc+RDfoeHEX4
-VC06zFLan6FGkA6IEfgYDDS0NaFpciLfWiCXUmg9qApbfara8vX8DWDOA/Yfpn8P
-jybD8a/zYDOhAFAb1lwEE5nEEda3MpHt7Iejw2jjlPxaZxlZhNofGQbm4A30e0yh
-0A5agT5V7AqkYQSOia9LV/XyWOnTD04hj5Oukr2mOy9Yfo0pIj6zddrpSGUyv8qX
-+3wUPJy5
-=kCbw
+iQGzBAEBCgAdFiEEOeHPFk9Ilu/zkECuhyyeckOuP+YFAmWMvZMACgkQhyyeckOu
+P+bMfAv9GPvjexDc0x7XF1Py4YWCinqVKbRjmLzekKLWZxkr2Cm2YM6Q9dpKHjI/
+bCne9HXRjYBL8BRx6NznJq2oRDChczuKf1TLqswqwLCJytrofDBiJa18KJWKHIz1
+wmdVcr4531JkrjcD3cd9lL534GTfnNn0q+DcTQbrxMAn/7hJqlE/qgiR7uOVgmlD
+kBorIi+qGTKzh3zy2ofgthwa9ihNCDhhJxmcoe8zsqRvK/5BXZD5WwRCemOIxoor
+0w5tBn8h+K5D6mCh6vbwM7RTM7bKQ65KmaGHdXkqMpuiKFKxtm/k7cungIneMMXf
+0UXyOtW9OQKDPh85czYsqsLB2W5O03BzYR9bSkYpt4ECTIwGXwxhdlfUnxS3bgrQ
+2PqGkW1yD/s1ppQWXjNoTSKQNuSV7ihhYan1yxvCtBsTCopTop5TYhdDzcU6ZPyx
+c3Y41/2MU1MSzZaoAIdWz/EIdAO0UoQ++FmNf96ggdH6HT/16RoWVK3fnpChswdq
+OEWLaoX7
+=ShIC
 -----END PGP SIGNATURE-----
