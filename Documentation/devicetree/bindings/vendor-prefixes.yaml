@@ -286,6 +286,8 @@ patternProperties:
     description: CompuLab Ltd.
   "^congatec,.*":
     description: congatec GmbH
+  "^coolpi,.*":
+    description: cool-pi.com
   "^coreriver,.*":
     description: CORERIVER Semiconductor Co.,Ltd.
   "^corpro,.*":
@@ -344,6 +346,8 @@ patternProperties:
     description: Digi International Inc.
   "^digilent,.*":
     description: Diglent, Inc.
+  "^dimonoff,.*":
+    description: Dimonoff inc.
   "^diodes,.*":
     description: Diodes, Inc.
   "^dioo,.*":
@@ -583,6 +587,8 @@ patternProperties:
     description: Hewlett Packard Enterprise
   "^hsg,.*":
     description: HannStar Display Co.
+  "^htc,.*":
+    description: HTC Corporation
   "^huawei,.*":
     description: Huawei Technologies Co., Ltd.
   "^hugsun,.*":
@@ -1149,6 +1155,8 @@ patternProperties:
     description: Shenzhen Roofull Technology Co, Ltd
   "^roseapplepi,.*":
     description: RoseapplePi.org
+  "^rve,.*":
+    description: Recharge Véhicule Électrique (RVE) inc.
   "^saef,.*":
     description: Saef Technology Limited
   "^samsung,.*":
@@ -1400,6 +1408,8 @@ patternProperties:
     description: TPO
   "^tq,.*":
     description: TQ-Systems GmbH
+  "^transpeed,.*":
+    description: Transpeed
   "^traverse,.*":
     description: Traverse Technologies Australia Pty Ltd
   "^tronfy,.*":
