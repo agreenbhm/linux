@@ -699,6 +699,15 @@ S:	Maintained
 F:	Documentation/devicetree/bindings/media/allegro,al5e.yaml
 F:	drivers/media/platform/allegro-dvt/
 
+ALLIED VISION ALVIUM CAMERA DRIVER
+M:	Tommaso Merciai <tomm.merciai@gmail.com>
+M:	Martin Hecht <martin.hecht@avnet.eu>
+L:	linux-media@vger.kernel.org
+S:	Maintained
+F:	Documentation/devicetree/bindings/media/i2c/alliedvision,alvium-csi2.yaml
+F:	drivers/media/i2c/alvium-csi2.c
+F:	drivers/media/i2c/alvium-csi2.h
+
 ALLWINNER A10 CSI DRIVER
 M:	Maxime Ripard <mripard@kernel.org>
 L:	linux-media@vger.kernel.org
@@ -1683,11 +1692,6 @@ M:	Russell King <linux@armlinux.org.uk>
 S:	Odd Fixes
 F:	drivers/amba/
 F:	include/linux/amba/bus.h
-
-ARM PRIMECELL CLCD PL110 DRIVER
-M:	Russell King <linux@armlinux.org.uk>
-S:	Odd Fixes
-F:	drivers/video/fbdev/amba-clcd.*
 
 ARM PRIMECELL KMI PL050 DRIVER
 M:	Russell King <linux@armlinux.org.uk>
@@ -3451,6 +3455,14 @@ F:	drivers/video/backlight/
 F:	include/linux/backlight.h
 F:	include/linux/pwm_backlight.h
 
+BAIKAL-T1 PVT HARDWARE MONITOR DRIVER
+M:	Serge Semin <fancer.lancer@gmail.com>
+L:	linux-hwmon@vger.kernel.org
+S:	Supported
+F:	Documentation/devicetree/bindings/hwmon/baikal,bt1-pvt.yaml
+F:	Documentation/hwmon/bt1-pvt.rst
+F:	drivers/hwmon/bt1-pvt.[ch]
+
 BARCO P50 GPIO DRIVER
 M:	Santosh Kumar Yadav <santoshkumar.yadav@barco.com>
 M:	Peter Korsgaard <peter.korsgaard@barco.com>
@@ -5152,7 +5164,7 @@ M:	Philipp Zabel <p.zabel@pengutronix.de>
 L:	linux-media@vger.kernel.org
 S:	Maintained
 F:	Documentation/devicetree/bindings/media/coda.yaml
-F:	drivers/media/platform/chips-media/
+F:	drivers/media/platform/chips-media/coda
 
 CODE OF CONDUCT
 M:	Greg Kroah-Hartman <gregkh@linuxfoundation.org>
@@ -5256,10 +5268,10 @@ W:	http://accessrunner.sourceforge.net/
 F:	drivers/usb/atm/cxacru.c
 
 CONFIDENTIAL COMPUTING THREAT MODEL FOR X86 VIRTUALIZATION (SNP/TDX)
-M:    Elena Reshetova <elena.reshetova@intel.com>
-M:    Carlos Bilbao <carlos.bilbao@amd.com>
-S:    Maintained
-F:    Documentation/security/snp-tdx-threat-model.rst
+M:	Elena Reshetova <elena.reshetova@intel.com>
+M:	Carlos Bilbao <carlos.bilbao@amd.com>
+S:	Maintained
+F:	Documentation/security/snp-tdx-threat-model.rst
 
 CONFIGFS
 M:	Joel Becker <jlbec@evilplan.org>
@@ -5884,7 +5896,7 @@ DELL SYSTEMS MANAGEMENT BASE DRIVER (dcdbas)
 M:	Stuart Hayes <stuart.w.hayes@gmail.com>
 L:	platform-driver-x86@vger.kernel.org
 S:	Maintained
-F:	Documentation/driver-api/dcdbas.rst
+F:	Documentation/userspace-api/dcdbas.rst
 F:	drivers/platform/x86/dell/dcdbas.*
 
 DELL WMI DDV DRIVER
@@ -6098,7 +6110,7 @@ F:	Documentation/devicetree/bindings/regulator/dlg,da9*.yaml
 F:	Documentation/devicetree/bindings/regulator/dlg,slg51000.yaml
 F:	Documentation/devicetree/bindings/sound/da[79]*.txt
 F:	Documentation/devicetree/bindings/thermal/da90??-thermal.txt
-F:	Documentation/devicetree/bindings/watchdog/da90??-wdt.txt
+F:	Documentation/devicetree/bindings/watchdog/dlg,da90??-watchdog.yaml
 F:	Documentation/hwmon/da90??.rst
 F:	drivers/gpio/gpio-da90??.c
 F:	drivers/hwmon/da90??-hwmon.c
@@ -6484,8 +6496,7 @@ T:	git git://anongit.freedesktop.org/drm/drm-misc
 F:	drivers/gpu/drm/sun4i/sun8i*
 
 DRM DRIVER FOR ARM PL111 CLCD
-M:	Emma Anholt <emma@anholt.net>
-S:	Supported
+S:	Orphan
 T:	git git://anongit.freedesktop.org/drm/drm-misc
 F:	drivers/gpu/drm/pl111/
 
@@ -6600,8 +6611,7 @@ F:	Documentation/devicetree/bindings/display/panel/himax,hx8394.yaml
 F:	drivers/gpu/drm/panel/panel-himax-hx8394.c
 
 DRM DRIVER FOR HX8357D PANELS
-M:	Emma Anholt <emma@anholt.net>
-S:	Maintained
+S:	Orphan
 T:	git git://anongit.freedesktop.org/drm/drm-misc
 F:	Documentation/devicetree/bindings/display/himax,hx8357d.txt
 F:	drivers/gpu/drm/tiny/hx8357d.c
@@ -6627,6 +6637,12 @@ S:	Maintained
 T:	git git://anongit.freedesktop.org/drm/drm-misc
 F:	Documentation/devicetree/bindings/display/ilitek,ili9486.yaml
 F:	drivers/gpu/drm/tiny/ili9486.c
+
+DRM DRIVER FOR ILITEK ILI9805 PANELS
+M:	Michael Trimarchi <michael@amarulasolutions.com>
+S:	Maintained
+F:	Documentation/devicetree/bindings/display/panel/ilitek,ili9805.yaml
+F:	drivers/gpu/drm/panel/panel-ilitek-ili9805.c
 
 DRM DRIVER FOR JADARD JD9365DA-H3 MIPI-DSI LCD PANELS
 M:	Jagan Teki <jagan@edgeble.ai>
@@ -6855,6 +6871,12 @@ S:	Maintained
 T:	git git://anongit.freedesktop.org/drm/drm-misc
 F:	Documentation/devicetree/bindings/display/ste,mcde.yaml
 F:	drivers/gpu/drm/mcde/
+
+DRM DRIVER FOR SYNAPTICS R63353 PANELS
+M:	Michael Trimarchi <michael@amarulasolutions.com>
+S:	Maintained
+F:	Documentation/devicetree/bindings/display/panel/synaptics,r63353.yaml
+F:	drivers/gpu/drm/panel/panel-synaptics-r63353.c
 
 DRM DRIVER FOR TI DLPC3433 MIPI DSI TO DMD BRIDGE
 M:	Jagan Teki <jagan@amarulasolutions.com>
@@ -7140,6 +7162,7 @@ F:	include/linux/platform_data/shmob_drm.h
 DRM DRIVERS FOR ROCKCHIP
 M:	Sandy Huang <hjc@rock-chips.com>
 M:	Heiko Stübner <heiko@sntech.de>
+M:	Andy Yan <andy.yan@rock-chips.com>
 L:	dri-devel@lists.freedesktop.org
 S:	Maintained
 T:	git git://anongit.freedesktop.org/drm/drm-misc
@@ -7194,8 +7217,8 @@ F:	Documentation/devicetree/bindings/display/ti/
 F:	drivers/gpu/drm/omapdrm/
 
 DRM DRIVERS FOR V3D
-M:	Emma Anholt <emma@anholt.net>
 M:	Melissa Wen <mwen@igalia.com>
+M:	Maíra Canal <mcanal@igalia.com>
 S:	Supported
 T:	git git://anongit.freedesktop.org/drm/drm-misc
 F:	Documentation/devicetree/bindings/gpu/brcm,bcm-v3d.yaml
@@ -7203,7 +7226,6 @@ F:	drivers/gpu/drm/v3d/
 F:	include/uapi/drm/v3d_drm.h
 
 DRM DRIVERS FOR VC4
-M:	Emma Anholt <emma@anholt.net>
 M:	Maxime Ripard <mripard@kernel.org>
 S:	Supported
 T:	git git://github.com/anholt/linux
@@ -8249,11 +8271,14 @@ L:	linux-input@vger.kernel.org
 S:	Maintained
 F:	drivers/input/joystick/fsia6b.c
 
-FOCUSRITE SCARLETT GEN 2/3 MIXER DRIVER
+FOCUSRITE SCARLETT2 MIXER DRIVER (Scarlett Gen 2+ and Clarett)
 M:	Geoffrey D. Bennett <g@b4.vu>
 L:	alsa-devel@alsa-project.org (moderated for non-subscribers)
 S:	Maintained
-T:	git git://git.kernel.org/pub/scm/linux/kernel/git/tiwai/sound.git
+W:	https://github.com/geoffreybennett/scarlett-gen2
+B:	https://github.com/geoffreybennett/scarlett-gen2/issues
+T:	git https://github.com/geoffreybennett/scarlett-gen2.git
+F:	include/uapi/sound/scarlett2.h
 F:	sound/usb/mixer_scarlett2.c
 
 FORCEDETH GIGABIT ETHERNET DRIVER
@@ -8558,7 +8583,6 @@ L:	linuxppc-dev@lists.ozlabs.org
 S:	Maintained
 F:	sound/soc/fsl/fsl*
 F:	sound/soc/fsl/imx*
-F:	sound/soc/fsl/mpc8610_hpcd.c
 
 FREESCALE SOC SOUND QMC DRIVER
 M:	Herve Codina <herve.codina@bootlin.com>
@@ -8737,6 +8761,21 @@ F:	kernel/futex/*
 F:	tools/perf/bench/futex*
 F:	tools/testing/selftests/futex/
 
+GALAXYCORE GC0308 CAMERA SENSOR DRIVER
+M:	Sebastian Reichel <sre@kernel.org>
+L:	linux-media@vger.kernel.org
+S:	Maintained
+F:	Documentation/devicetree/bindings/media/i2c/galaxycore,gc0308.yaml
+F:	drivers/media/i2c/gc0308.c
+
+GALAXYCORE GC2145 SENSOR DRIVER
+M:	Alain Volmat <alain.volmat@foss.st.com>
+L:	linux-media@vger.kernel.org
+S:	Maintained
+T:	git git://linuxtv.org/media_tree.git
+F:	Documentation/devicetree/bindings/media/i2c/galaxycore,gc2145.yaml
+F:	drivers/media/i2c/gc2145.c
+
 GATEWORKS SYSTEM CONTROLLER (GSC) DRIVER
 M:	Tim Harvey <tharvey@gateworks.com>
 S:	Maintained
@@ -8855,21 +8894,13 @@ F:	Documentation/devicetree/bindings/i2c/i2c-demux-pinctrl.yaml
 F:	drivers/i2c/muxes/i2c-demux-pinctrl.c
 
 GENERIC PM DOMAINS
-M:	"Rafael J. Wysocki" <rafael@kernel.org>
-M:	Kevin Hilman <khilman@kernel.org>
 M:	Ulf Hansson <ulf.hansson@linaro.org>
 L:	linux-pm@vger.kernel.org
 S:	Supported
 F:	Documentation/devicetree/bindings/power/power?domain*
-F:	drivers/base/power/domain*.c
-F:	include/linux/pm_domain.h
-
-GENERIC PM DOMAIN PROVIDERS
-M:	Ulf Hansson <ulf.hansson@linaro.org>
-L:	linux-pm@vger.kernel.org
-S:	Supported
 T:	git git://git.kernel.org/pub/scm/linux/kernel/git/ulfh/linux-pm.git
 F:	drivers/pmdomain/
+F:	include/linux/pm_domain.h
 
 GENERIC RADIX TREE
 M:	Kent Overstreet <kent.overstreet@linux.dev>
@@ -8935,6 +8966,13 @@ T:	git git://git.kernel.org/pub/scm/linux/kernel/git/gfs2/linux-gfs2.git
 F:	Documentation/filesystems/gfs2*
 F:	fs/gfs2/
 F:	include/uapi/linux/gfs2_ondisk.h
+
+GIGABYTE WATERFORCE SENSOR DRIVER
+M:	Aleksa Savic <savicaleksa83@gmail.com>
+L:	linux-hwmon@vger.kernel.org
+S:	Maintained
+F:	Documentation/hwmon/gigabyte_waterforce.rst
+F:	drivers/hwmon/gigabyte_waterforce.c
 
 GIGABYTE WMI DRIVER
 M:	Thomas Weißschuh <thomas@weissschuh.net>
@@ -10370,6 +10408,17 @@ IMGTEC IR DECODER DRIVER
 S:	Orphan
 F:	drivers/media/rc/img-ir/
 
+IMGTEC POWERVR DRM DRIVER
+M:	Frank Binns <frank.binns@imgtec.com>
+M:	Donald Robson <donald.robson@imgtec.com>
+M:	Matt Coster <matt.coster@imgtec.com>
+S:	Supported
+T:	git git://anongit.freedesktop.org/drm/drm-misc
+F:	Documentation/devicetree/bindings/gpu/img,powervr.yaml
+F:	Documentation/gpu/imagination/
+F:	drivers/gpu/drm/imagination/
+F:	include/uapi/drm/pvr_drm.h
+
 IMON SOUNDGRAPH USB IR RECEIVER
 M:	Sean Young <sean@mess.org>
 L:	linux-media@vger.kernel.org
@@ -10609,16 +10658,26 @@ L:	linux-kernel@vger.kernel.org
 S:	Supported
 F:	arch/x86/include/asm/intel-family.h
 
-INTEL DRM DRIVERS (excluding Poulsbo, Moorestown and derivative chipsets)
+INTEL DRM DISPLAY FOR XE AND I915 DRIVERS
+M:	Jani Nikula <jani.nikula@linux.intel.com>
+M:	Rodrigo Vivi <rodrigo.vivi@intel.com>
+L:	intel-gfx@lists.freedesktop.org
+L:	intel-xe@lists.freedesktop.org
+S:	Supported
+F:	drivers/gpu/drm/i915/display/
+F:	drivers/gpu/drm/xe/display/
+F:	drivers/gpu/drm/xe/compat-i915-headers
+
+INTEL DRM I915 DRIVER (Meteor Lake, DG2 and older excluding Poulsbo, Moorestown and derivative)
 M:	Jani Nikula <jani.nikula@linux.intel.com>
 M:	Joonas Lahtinen <joonas.lahtinen@linux.intel.com>
 M:	Rodrigo Vivi <rodrigo.vivi@intel.com>
 M:	Tvrtko Ursulin <tvrtko.ursulin@linux.intel.com>
 L:	intel-gfx@lists.freedesktop.org
 S:	Supported
-W:	https://01.org/linuxgraphics/
+W:	https://drm.pages.freedesktop.org/intel-docs/
 Q:	http://patchwork.freedesktop.org/project/intel-gfx/
-B:	https://gitlab.freedesktop.org/drm/intel/-/wikis/How-to-file-i915-bugs
+B:	https://drm.pages.freedesktop.org/intel-docs/how-to-file-i915-bugs.html
 C:	irc://irc.oftc.net/intel-gfx
 T:	git git://anongit.freedesktop.org/drm-intel
 F:	Documentation/ABI/testing/sysfs-driver-intel-i915-hwmon
@@ -10627,6 +10686,23 @@ F:	drivers/gpu/drm/ci/xfails/i915*
 F:	drivers/gpu/drm/i915/
 F:	include/drm/i915*
 F:	include/uapi/drm/i915_drm.h
+
+INTEL DRM XE DRIVER (Lunar Lake and newer)
+M:	Lucas De Marchi <lucas.demarchi@intel.com>
+M:	Oded Gabbay <ogabbay@kernel.org>
+M:	Thomas Hellström <thomas.hellstrom@linux.intel.com>
+L:	intel-xe@lists.freedesktop.org
+S:	Supported
+W:	https://drm.pages.freedesktop.org/intel-docs/
+Q:	http://patchwork.freedesktop.org/project/intel-xe/
+B:	https://gitlab.freedesktop.org/drm/xe/kernel/-/issues
+C:	irc://irc.oftc.net/xe
+T:	git https://gitlab.freedesktop.org/drm/xe/kernel.git
+F:	Documentation/ABI/testing/sysfs-driver-intel-xe-hwmon
+F:	Documentation/gpu/xe/
+F:	drivers/gpu/drm/xe/
+F:	include/drm/xe*
+F:	include/uapi/drm/xe_drm.h
 
 INTEL ETHERNET DRIVERS
 M:	Jesse Brandeburg <jesse.brandeburg@intel.com>
@@ -10650,13 +10726,6 @@ L:	linux-rdma@vger.kernel.org
 S:	Supported
 F:	drivers/infiniband/hw/irdma/
 F:	include/uapi/rdma/irdma-abi.h
-
-INTEL FRAMEBUFFER DRIVER (excluding 810 and 815)
-M:	Maik Broemme <mbroemme@libmpq.org>
-L:	linux-fbdev@vger.kernel.org
-S:	Maintained
-F:	Documentation/fb/intelfb.rst
-F:	drivers/video/fbdev/intelfb/
 
 INTEL GPIO DRIVERS
 M:	Andy Shevchenko <andy@kernel.org>
@@ -11238,7 +11307,7 @@ F:	drivers/media/radio/radio-isa*
 ISAPNP
 M:	Jaroslav Kysela <perex@perex.cz>
 S:	Maintained
-F:	Documentation/driver-api/isapnp.rst
+F:	Documentation/userspace-api/isapnp.rst
 F:	drivers/pnp/isapnp/
 F:	include/linux/isapnp.h
 
@@ -12636,6 +12705,16 @@ S:	Maintained
 F:	Documentation/hwmon/ltc4261.rst
 F:	drivers/hwmon/ltc4261.c
 
+LTC4286 HARDWARE MONITOR DRIVER
+M:	Delphine CC Chiu <Delphine_CC_Chiu@Wiwynn.com>
+L:	linux-i2c@vger.kernel.org
+S:	Maintained
+F:	Documentation/devicetree/bindings/hwmon/lltc,ltc4286.yaml
+F:	Documentation/hwmon/ltc4286.rst
+F:	drivers/hwmon/pmbus/Kconfig
+F:	drivers/hwmon/pmbus/Makefile
+F:	drivers/hwmon/pmbus/ltc4286.c
+
 LTC4306 I2C MULTIPLEXER DRIVER
 M:	Michael Hennerich <michael.hennerich@analog.com>
 L:	linux-i2c@vger.kernel.org
@@ -12750,7 +12829,7 @@ F:	drivers/mailbox/arm_mhuv2.c
 F:	include/linux/mailbox/arm_mhuv2_message.h
 
 MAN-PAGES: MANUAL PAGES FOR LINUX -- Sections 2, 3, 4, 5, and 7
-M:	Michael Kerrisk <mtk.manpages@gmail.com>
+M:	Alejandro Colomar <alx@kernel.org>
 L:	linux-man@vger.kernel.org
 S:	Maintained
 W:	http://www.kernel.org/doc/man-pages
@@ -13020,6 +13099,7 @@ MAX96712 QUAD GMSL2 DESERIALIZER DRIVER
 M:	Niklas Söderlund <niklas.soderlund@ragnatech.se>
 L:	linux-media@vger.kernel.org
 S:	Maintained
+F:	Documentation/devicetree/bindings/media/i2c/maxim,max96712.yaml
 F:	drivers/staging/media/max96712/max96712.c
 
 MAX9860 MONO AUDIO VOICE CODEC DRIVER
@@ -13440,13 +13520,16 @@ W:	https://linuxtv.org
 T:	git git://linuxtv.org/media_tree.git
 F:	drivers/media/dvb-frontends/stv6111*
 
-MEDIA DRIVERS FOR STM32 - DCMI
+MEDIA DRIVERS FOR STM32 - DCMI / DCMIPP
 M:	Hugues Fruchet <hugues.fruchet@foss.st.com>
+M:	Alain Volmat <alain.volmat@foss.st.com>
 L:	linux-media@vger.kernel.org
 S:	Supported
 T:	git git://linuxtv.org/media_tree.git
 F:	Documentation/devicetree/bindings/media/st,stm32-dcmi.yaml
+F:	Documentation/devicetree/bindings/media/st,stm32-dcmipp.yaml
 F:	drivers/media/platform/st/stm32/stm32-dcmi.c
+F:	drivers/media/platform/st/stm32/stm32-dcmipp/*
 
 MEDIA INPUT INFRASTRUCTURE (V4L/DVB)
 M:	Mauro Carvalho Chehab <mchehab@kernel.org>
@@ -16023,6 +16106,14 @@ S:	Maintained
 T:	git git://linuxtv.org/media_tree.git
 F:	drivers/media/i2c/ov5695.c
 
+OMNIVISION OV64A40 SENSOR DRIVER
+M:	Jacopo Mondi <jacopo.mondi@ideasonboard.com>
+L:	linux-media@vger.kernel.org
+S:	Maintained
+T:	git git://linuxtv.org/media_tree.git
+F:	Documentation/devicetree/bindings/media/i2c/ovti,ov64a40.yaml
+F:	drivers/media/i2c/ov64a40.c
+
 OMNIVISION OV7670 SENSOR DRIVER
 L:	linux-media@vger.kernel.org
 S:	Orphan
@@ -17554,12 +17645,11 @@ F:	Documentation/devicetree/bindings/leds/irled/pwm-ir-tx.yaml
 F:	drivers/media/rc/pwm-ir-tx.c
 
 PWM SUBSYSTEM
-M:	Thierry Reding <thierry.reding@gmail.com>
-R:	Uwe Kleine-König <u.kleine-koenig@pengutronix.de>
+M:	Uwe Kleine-König <u.kleine-koenig@pengutronix.de>
 L:	linux-pwm@vger.kernel.org
 S:	Maintained
 Q:	https://patchwork.ozlabs.org/project/linux-pwm/list/
-T:	git git://git.kernel.org/pub/scm/linux/kernel/git/thierry.reding/linux-pwm.git
+T:	git https://git.kernel.org/pub/scm/linux/kernel/git/ukleinek/linux.git
 F:	Documentation/devicetree/bindings/gpio/gpio-mvebu.yaml
 F:	Documentation/devicetree/bindings/pwm/
 F:	Documentation/driver-api/pwm.rst
@@ -17569,7 +17659,7 @@ F:	drivers/video/backlight/pwm_bl.c
 F:	include/dt-bindings/pwm/
 F:	include/linux/pwm.h
 F:	include/linux/pwm_backlight.h
-K:	pwm_(config|apply_state|ops)
+K:	pwm_(config|apply_might_sleep|apply_atomic|ops)
 
 PXA GPIO DRIVER
 M:	Robert Jarzmik <robert.jarzmik@free.fr>
@@ -20335,6 +20425,7 @@ F:	drivers/media/dvb-frontends/sp2*
 
 SPANISH DOCUMENTATION
 M:	Carlos Bilbao <carlos.bilbao@amd.com>
+R:	Avadhut Naik <avadhut.naik@amd.com>
 S:	Maintained
 F:	Documentation/translations/sp_SP/
 
@@ -20612,6 +20703,15 @@ STARFIRE/DURALAN NETWORK DRIVER
 M:	Ion Badulescu <ionut@badula.org>
 S:	Odd Fixes
 F:	drivers/net/ethernet/adaptec/starfire*
+
+STARFIVE CAMERA SUBSYSTEM DRIVER
+M:	Jack Zhu <jack.zhu@starfivetech.com>
+M:	Changhuang Liang <changhuang.liang@starfivetech.com>
+L:	linux-media@vger.kernel.org
+S:	Maintained
+F:	Documentation/admin-guide/media/starfive_camss.rst
+F:	Documentation/devicetree/bindings/media/starfive,jh7110-camss.yaml
+F:	drivers/staging/media/starfive/camss
 
 STARFIVE CRYPTO DRIVER
 M:	Jia Jie Ho <jiajie.ho@starfivetech.com>
@@ -21313,6 +21413,12 @@ L:	linux-media@vger.kernel.org
 S:	Maintained
 F:	drivers/media/rc/ttusbir.c
 
+TECHWELL TW9900 VIDEO DECODER
+M:	Mehdi Djait <mehdi.djait@bootlin.com>
+L:	linux-media@vger.kernel.org
+S:	Maintained
+F:	drivers/media/i2c/tw9900.c
+
 TECHWELL TW9910 VIDEO DECODER
 L:	linux-media@vger.kernel.org
 S:	Orphan
@@ -21324,7 +21430,9 @@ M:	Jens Wiklander <jens.wiklander@linaro.org>
 R:	Sumit Garg <sumit.garg@linaro.org>
 L:	op-tee@lists.trustedfirmware.org
 S:	Maintained
-F:	Documentation/staging/tee.rst
+F:	Documentation/driver-api/tee.rst
+F:	Documentation/tee/
+F:	Documentation/userspace-api/tee.rst
 F:	drivers/tee/
 F:	include/linux/tee_drv.h
 F:	include/uapi/linux/tee.h
@@ -21618,6 +21726,17 @@ L:	platform-driver-x86@vger.kernel.org
 S:	Maintained
 F:	Documentation/ABI/testing/sysfs-class-firmware-attributes
 F:	drivers/platform/x86/think-lmi.?
+
+THP7312 ISP DRIVER
+M:	Laurent Pinchart <laurent.pinchart@ideasonboard.com>
+M:	Paul Elder <paul.elder@ideasonboard.com>
+L:	linux-media@vger.kernel.org
+S:	Maintained
+T:	git git://linuxtv.org/media_tree.git
+F:	Documentation/devicetree/bindings/media/i2c/thine,thp7312.yaml
+F:	Documentation/userspace-api/media/drivers/thp7312.rst
+F:	drivers/media/i2c/thp7312.c
+F:	include/uapi/linux/thp7312.h
 
 THUNDERBOLT DMA TRAFFIC TEST DRIVER
 M:	Isaac Hazan <isaac.hazan@intel.com>
@@ -22095,7 +22214,7 @@ F:	kernel/trace/trace_osnoise.c
 F:	kernel/trace/trace_sched_wakeup.c
 
 TRADITIONAL CHINESE DOCUMENTATION
-M:	Hu Haowen <src.res.211@gmail.com>
+M:	Hu Haowen <2023002089@link.tyut.edu.cn>
 S:	Maintained
 W:	https://github.com/srcres258/linux-doc
 T:	git git://github.com/srcres258/linux-doc.git doc-zh-tw
@@ -22764,6 +22883,7 @@ S:	Maintained
 F:	Documentation/driver-api/media/camera-sensor.rst
 F:	Documentation/driver-api/media/tx-rx.rst
 F:	drivers/media/i2c/ar*
+F:	drivers/media/i2c/gc*
 F:	drivers/media/i2c/hi*
 F:	drivers/media/i2c/imx*
 F:	drivers/media/i2c/mt*
@@ -23405,6 +23525,14 @@ F:	drivers/watchdog/
 F:	include/linux/watchdog.h
 F:	include/trace/events/watchdog.h
 F:	include/uapi/linux/watchdog.h
+
+WAVE5 VPU CODEC DRIVER
+M:	Nas Chung <nas.chung@chipsnmedia.com>
+M:	Jackson Lee <jackson.lee@chipsnmedia.com>
+L:	linux-media@vger.kernel.org
+S:	Maintained
+F:	Documentation/devicetree/bindings/media/cnm,wave521c.yaml
+F:	drivers/media/platform/chips-media/wave5/
 
 WHISKEYCOVE PMIC GPIO DRIVER
 M:	Kuppuswamy Sathyanarayanan <sathyanarayanan.kuppuswamy@linux.intel.com>
