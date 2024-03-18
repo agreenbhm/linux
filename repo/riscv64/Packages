@@ -1,14 +1,14 @@
 Package: linux-headers-rolling
 Source: linux-upstream
-Version: 6.8.0+-698
+Version: 6.8.0+-700
 Architecture: riscv64
-Maintainer: root <root@e06a444b382b>
+Maintainer: root <root@07d37adc4652>
 Installed-Size: 50043
-Filename: ./linux-headers-rolling_6.8.0+-698_riscv64.deb
-Size: 8442932
-MD5sum: e22e4daff7b29fb42680ecd57d88e595
-SHA1: 73056ebb3c43320fcd936fb2e118ccb71ca3d520
-SHA256: 8cd0dc26e90a07d8eb53161e923d8b7562059bd2e69def2c4fac547a8c180ea5
+Filename: ./linux-headers-rolling_6.8.0+-700_riscv64.deb
+Size: 8442844
+MD5sum: 17a04724230e2e9aad61db952e8901e5
+SHA1: b8072452d47fd7831106f842449c7eac13ff3624
+SHA256: 5d189c0ae3cbc87a1f429ae0c89df85d3561c7266981953f9d9464d925b5b329
 Section: kernel
 Priority: optional
 Homepage: https://www.kernel.org/
@@ -19,15 +19,15 @@ Description: Linux kernel headers for 6.8.0+ on riscv64
 
 Package: linux-image-rolling
 Source: linux-upstream
-Version: 6.8.0+-698
+Version: 6.8.0+-700
 Architecture: riscv64
-Maintainer: root <root@e06a444b382b>
-Installed-Size: 21109
-Filename: ./linux-image-rolling_6.8.0+-698_riscv64.deb
-Size: 11752228
-MD5sum: 6927581622a96fc2a827730f40eb4f4a
-SHA1: 693ae3e1efe1399f8a859f299fab9d3f68c5714a
-SHA256: 160080dd5a10584680c0cbe77590c2c156d93c81ed15d4e9eb5e177b1387338a
+Maintainer: root <root@07d37adc4652>
+Installed-Size: 21111
+Filename: ./linux-image-rolling_6.8.0+-700_riscv64.deb
+Size: 11754456
+MD5sum: cb7de9fa87b447c6a111f4b6d410b84e
+SHA1: a035df5faaf81f97c060b1711b512bed5a5ee0d4
+SHA256: aea4229dcdcd486f9c41eb0c03629a36d9540eaa53b22ca9718e22e4e3eba20d
 Section: kernel
 Priority: optional
 Homepage: https://www.kernel.org/
@@ -37,16 +37,16 @@ Description: Linux kernel, version 6.8.0+
 
 Package: linux-libc-dev
 Source: linux-upstream
-Version: 6.8.0+-698
+Version: 6.8.0+-700
 Architecture: riscv64
-Maintainer: root <root@e06a444b382b>
+Maintainer: root <root@07d37adc4652>
 Installed-Size: 6818
 Provides: linux-kernel-headers
-Filename: ./linux-libc-dev_6.8.0+-698_riscv64.deb
-Size: 1326064
-MD5sum: 10b21e647c97d8cf3ef0915278ab4915
-SHA1: ec9923a6d5690f997edd0925ca072bd6adbcbcbc
-SHA256: 53833a610efc82f81b84456d77bf140f34b102d2279f523236af263c07ce5765
+Filename: ./linux-libc-dev_6.8.0+-700_riscv64.deb
+Size: 1326080
+MD5sum: d848891a3ab96580810efb4dc1bda310
+SHA1: 15ea55f9920c758faf3405dd715b6af6017717fa
+SHA256: 7303a45035fd05d43f0d43b7fb74b03d6c224d669e3f32d44e32c9e6be8a0476
 Section: devel
 Priority: optional
 Multi-Arch: same
