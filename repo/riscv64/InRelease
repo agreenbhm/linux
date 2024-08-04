@@ -1,30 +1,30 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA512
 
-Date: Sat, 03 Aug 2024 00:16:20 +0000
+Date: Sun, 04 Aug 2024 00:17:21 +0000
 MD5Sum:
- 19d7c1643bfedf5a5ccca089396167de             1944 Packages
- 74cc2a8e76e9c9dd13f2d0ad55065108               38 Release
+ 8ee0945276c89d98a6056bec682b4d49             1944 Packages
+ e97e7a13e129dc3804c8697d85559e7d               38 Release
 SHA1:
- f584d4ad1d2e5993828d6e2ddacb427e7182db3b             1944 Packages
- 470594eb1c6423f0396a90af8d55b206f4657e11               38 Release
+ 47b9fc7eec546b05cf19d915f236b15fe467ad95             1944 Packages
+ d696d06b10fd1a6e0b90304ec8b8a7a6d859f2a8               38 Release
 SHA256:
- 11d6e2a5832003388d26a4eefb41215b088ce22aa9cf34be578158ab63cdc3b4             1944 Packages
- 513fcb48b9b2777d6fe5e46f4f5f1bdf5fcea350fcd5505dcd652967fa48e8bc               38 Release
+ a4f516fd714bdde2bcb02e3e530fb69895b2d86adef395116977d160be7c6180             1944 Packages
+ c08f5fa12c19b03e21a8ecc97d76ec7eb631970dfedf3f9dda4c7a1c7659e219               38 Release
 SHA512:
- 0425ff0809d4e1b795f6f7bc5177f338555e3bd4064fbea10d6cde06fb6d2e926507d992a5360a1f402df4f8ccd80e9f92436a474c442d020b808c8e1b4fc902             1944 Packages
- ea8a55dd0bf2c07ebaafc0b3193fb0dde08e1ca6c522672b90f208fab8e81bbd49dede03a13173241477dbd6a86463f8144d851aa3121581e51ec5f7fd21180c               38 Release
+ fb7dc9f6f5d30e80548c67b1a02156faa9d07ad4f171b3b16d0ab07e27e5d038671623b9ac4622b346c063df1699ccdd8eaad7ea43f01d831652586cc800515e             1944 Packages
+ b91cfe5e0a56eb5f30933029c84622d8d5d965070afd0a01c57c278cdbad6e40fc31abb58ac62008a306e4b213093cb02d9ab93deb0641c4a4514fdb3ba5aac6               38 Release
 -----BEGIN PGP SIGNATURE-----
 
-iQGzBAEBCgAdFiEEOeHPFk9Ilu/zkECuhyyeckOuP+YFAmatdtQACgkQhyyeckOu
-P+aekwv/ZKn9/CsH+wZkklbCjrOveEr+55Yc/y+ejZUK8f2OTmViKBB5ZqXgkrXI
-dkcclbxw4oDQachhJjZimcna+9sgKS/ekqdjZL81fO7rzrNVNTZLhrw7uxOR2PBd
-skK7gIqBeS5ZWNa3VF1bV9th0Sofk33us67FTZObSP2zmx39xUolREocJCwmutt9
-23VzsGSmk5GEEU2eu6Yxx743DyipXcpjvcfQxNCZUoRYbXgr46GqLAt/clZar6MH
-1v65K8LI4Ed9ijUgk5XEwwIl3GBpLYCcoSCohb9REonQ11rSMwtsGrl4i1FeYOn3
-VmClG3LUVoy7uauZcR/8PkIRWQ83GHmPo1laOFBPD7koP/HKQz4YxIrIdxZNM6oZ
-FKYJhtgeY7kxMMonrf+XzkZ7GhZFVsAk3yyx0R/Rwpn5bhZzEp51mjYtribebjRl
-FmjMea6swWriVW3wiDOxrY+u1vVdg7mPkzp4IHXz3rHGGAy/yMM+Hn3ncLB1jj6b
-knBlZ/M0
-=3DJ4
+iQGzBAEBCgAdFiEEOeHPFk9Ilu/zkECuhyyeckOuP+YFAmauyJEACgkQhyyeckOu
+P+bKzAv9F7eVWeXIPZIPuNGF+aL7y3oKnd/OnS5ELxk+U5CNXP1jnfj2jEub73uR
+BBO1sZahduStdzovs3p2DXKbHoOGbVx7sjSVHRkOXLKOSYM++Iqsmh06KM/tbiHZ
+CqV+U7cVbNS1ZEigW3u8wJ55u/fZEhNuIpb6Uy+iahFFKejbnXRdQFuqI3pfxibc
+FnX1t/ZvdC+lornCK2TPwwKJTmlm9fPhMCVNEMsgCvK1OqPjrwX3hbnax0sGwQp0
+qqxC9VkorAgtwEimIwfL6sUk4bukoCqZnMfusFZ1SYWsWhBtzwgDfGMD+d/Kuyb8
+89y2klv9jmHBZE5OGxUYCIGhkkKvOZ6f209i4n71F3FVM8gmWxszv/ceAdwpxCrB
+yY8Ik+O/z/zmAVA9UtwUPealQMnH2zo6Iyf4ZKrQTz/6DBoEtLuSXPA6xPAZtvli
+YS6EGX3n0af+USg9IMBwKB+1DAY6EMUUIc3RjDnEUqxC5pTbghovx6zUxNDifVsf
+Kj1FhvJq
+=Y+XS
 -----END PGP SIGNATURE-----
