@@ -1,14 +1,14 @@
 Package: linux-headers-rolling
 Source: linux-upstream
-Version: 6.8.0+-982
+Version: 6.8.0+-984
 Architecture: riscv64
-Maintainer: root <root@e0aef3801eb5>
+Maintainer: root <root@a5f4091eb4bd>
 Installed-Size: 50043
-Filename: ./linux-headers-rolling_6.8.0+-982_riscv64.deb
-Size: 8442988
-MD5sum: 502795dcdb7571d695f98decff0d83bf
-SHA1: 6c0b1e0504b0927c7c4ad412240df86afed9c36a
-SHA256: 680d34e7c2c360c39fe9367b3042016206fdf28cdc846950968bc5b83004d925
+Filename: ./linux-headers-rolling_6.8.0+-984_riscv64.deb
+Size: 8443392
+MD5sum: 69e8e317f18476ffd8714ba3ab3d468d
+SHA1: 2a544bb478d794f0318b925a07a797856a00d79d
+SHA256: eeedccab633f5e83aef464b20988c33b28ba7203b533f51aff3fcf3311818c42
 Section: kernel
 Priority: optional
 Homepage: https://www.kernel.org/
@@ -19,15 +19,15 @@ Description: Linux kernel headers for 6.8.0+ on riscv64
 
 Package: linux-image-rolling
 Source: linux-upstream
-Version: 6.8.0+-982
+Version: 6.8.0+-984
 Architecture: riscv64
-Maintainer: root <root@e0aef3801eb5>
+Maintainer: root <root@a5f4091eb4bd>
 Installed-Size: 21109
-Filename: ./linux-image-rolling_6.8.0+-982_riscv64.deb
-Size: 11751512
-MD5sum: c80aec7d8ca15daa34630ab90e11d860
-SHA1: c192634aa40e7587db97ff123c9d471c5e650025
-SHA256: e685d726b0ecadb57785ebeb658984bba12d9dbf1a9ca366ab2909faf52bd8e4
+Filename: ./linux-image-rolling_6.8.0+-984_riscv64.deb
+Size: 11752184
+MD5sum: 43fb59366fbb999be685f79894647ffa
+SHA1: 760dd4946b887963659e9807800f736291e34347
+SHA256: 923b2ec97115b6c379045a402c3fc71b5fc4456d4f6602a59817f67bb8903669
 Section: kernel
 Priority: optional
 Homepage: https://www.kernel.org/
@@ -37,16 +37,16 @@ Description: Linux kernel, version 6.8.0+
 
 Package: linux-libc-dev
 Source: linux-upstream
-Version: 6.8.0+-982
+Version: 6.8.0+-984
 Architecture: riscv64
-Maintainer: root <root@e0aef3801eb5>
+Maintainer: root <root@a5f4091eb4bd>
 Installed-Size: 6818
 Provides: linux-kernel-headers
-Filename: ./linux-libc-dev_6.8.0+-982_riscv64.deb
+Filename: ./linux-libc-dev_6.8.0+-984_riscv64.deb
 Size: 1326052
-MD5sum: a3e51a52943ac6c8693299358780d6b4
-SHA1: 04c196372b3414cf6ccaff764c05305519e81697
-SHA256: 0def93ee1111d58b1a26713b0a3c34326cf4750c3bdbfaa8040f837f19fd4a80
+MD5sum: d6c78085dbddc769f3cc7b4f83efeeee
+SHA1: 6945fe11d2bf0dd29cd46efddeb4d2f160cf4b2c
+SHA256: 2bc6a9132845d559f2539739ca1b7736c20de86572a181bc9bf2a40217670972
 Section: devel
 Priority: optional
 Multi-Arch: same
